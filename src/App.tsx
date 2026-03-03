@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown, Music, Film, ShieldCheck, Coins } from 'lucide-react';
 import AudioPlayer from './components/AudioPlayer';
 import VisualGallery from './components/VisualGallery';
+import PricingTable from './components/PricingTable';
+import LegalGuarantee from './components/LegalGuarantee';
 import ContactForm from './components/ContactForm';
 
 function App() {
@@ -103,7 +105,7 @@ function App() {
           </div>
           <div className="space-y-6 text-neutral-400 font-light leading-relaxed text-lg">
             <p>
-              El huésped de hoy busca desconexión y autenticidad. Nuestra propuesta es dotar a su hotel de una banda sonora propia, inspirada en el entorno de Huelva (Doñana, Riotinto, Sierra), que refuerce su marca y mejore el bienestar del cliente.
+              El huésped de hoy busca desconexión y autenticidad. Nuestra propuesta es dotar a su hotel de una banda sonora propia, inspirada en el entorno de Huelva (Doñana, Riotinto, Sierra y Costa), que refuerce su marca y mejore el bienestar del cliente.
             </p>
             <p>
               Transforme su espacio en un destino inolvidable a través del diseño sonoro y visual.
@@ -200,6 +202,21 @@ function App() {
               referrerPolicy="no-referrer"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-32 px-6 bg-neutral-900/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-gold-500 text-xs uppercase tracking-widest mb-4 block">Inversión</span>
+            <h2 className="text-4xl md:text-5xl font-serif mb-6">Atmosphere as a Service (AaaS)</h2>
+            <p className="text-neutral-400 max-w-2xl mx-auto font-light">
+              Modelos de suscripción flexibles diseñados para escalar con su marca.
+            </p>
+          </div>
+          <PricingTable />
+          <LegalGuarantee />
         </div>
       </section>
 

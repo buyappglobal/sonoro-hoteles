@@ -21,6 +21,12 @@ const tracks = [
     description: "La profundidad histórica de Riotinto.",
     duration: "3:15",
     url: "https://cdn.pixabay.com/download/audio/2021/09/06/audio_9c05c0a06c.mp3?filename=ambient-piano-11673.mp3"
+  },
+  {
+    title: "Luz Salada",
+    description: "La brisa infinita de la Costa.",
+    duration: "3:55",
+    url: "https://cdn.pixabay.com/download/audio/2022/03/09/audio_c8c8a73467.mp3?filename=waves-hitting-the-rocks-11993.mp3"
   }
 ];
 
@@ -49,10 +55,10 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+    <div className="w-full max-w-5xl mx-auto p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         {/* Cover Art / Visualizer Placeholder */}
-        <div className="w-full md:w-64 h-64 bg-neutral-900 rounded-xl overflow-hidden relative group shadow-2xl">
+        <div className="w-full md:w-64 h-64 bg-neutral-900 rounded-xl overflow-hidden relative group shadow-2xl shrink-0">
            <img 
             src={`https://picsum.photos/seed/${tracks[currentTrack].title}/500/500`} 
             alt="Album Art" 
@@ -128,7 +134,7 @@ export default function AudioPlayer() {
         </div>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {tracks.map((track, index) => (
           <button
             key={index}
